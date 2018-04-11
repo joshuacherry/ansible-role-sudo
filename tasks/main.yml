@@ -1,0 +1,22 @@
+---
+- name: Installing sudo package
+  yum:
+    name: "{{ sudo_package }}"
+    state: present
+  when: ansible_os_family == "RedHat"
+
+- name: Installing sudo package
+  apt:
+    name: "{{ sudo_package }}"
+    state: present
+    update_cache: "yes"
+  when: ansible_os_family == "Debian"
+
+- name: Creating sudoers configuration under /etc/sudoers.d
+  template:
+    src: "sudoers.d/ansible.j2"
+    dest: "/etc/sudoers.d/{{ sudo_sudoers_file }}"
+    validate: "visudo -cf %s"
+    owner: root
+    group: "{{ sudo_sudoers_group }}"
+    mode: "0440"

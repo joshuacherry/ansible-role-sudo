@@ -1,0 +1,13 @@
+---
+- name: Converge
+  hosts: all
+  roles:
+    - role: ansible-role-sudo
+  vars:
+    sudo_users:
+      - name: foo
+        nopasswd: 'yes'
+        commands: '/bin/ls'
+    sudo_defaults:
+      - name: foo
+        defaults: requiretty
