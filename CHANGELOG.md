@@ -16,4 +16,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-[Unreleased]: https://github.com/joshuacherry/ansible-role-sudo/compare/1.0.0...HEAD
+## [1.0.1] 2018-04-12
+
+### Added
+
+- updated defaults comments for clarification of options
+
+[Unreleased]: https://github.com/joshuacherry/ansible-role-sudo/compare/1.0.1...HEAD
+[1.0.1]: https://github.com/joshuacherry/example-ansible-role/compare/1.0.0...1.0.1

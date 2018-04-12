@@ -6,10 +6,13 @@
 # sudo_users:
 #  - name: '%group1'
 #  - name: 'bar'
-#    nopasswd: yes
+#    nopasswd: true
+#    hosts: ALL
+#    users: ALL
+#    groups: ALL
 #  - name: '%group2'
 #    commands: '/bin/ls'
-#
+
 
 # package name (version)
 sudo_package: sudo
