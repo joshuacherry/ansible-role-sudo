@@ -16,11 +16,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.0.2] - 2018-05-09
+
+### Changed
+
+- Changed Ansible version for tests
+
 ## [1.0.1] 2018-04-12
 
 ### Added
 
 - updated defaults comments for clarification of options
 
-[Unreleased]: https://github.com/joshuacherry/ansible-role-sudo/compare/1.0.1...HEAD
-[1.0.1]: https://github.com/joshuacherry/example-ansible-role/compare/1.0.0...1.0.1
+[Unreleased]: https://github.com/joshuacherry/ansible-role-sudo/compare/1.0.2...HEAD
+[1.0.2]: https://github.com/joshuacherry/ansible-role-sudo/compare/1.0.1...1.0.2
+[1.0.1]: https://github.com/joshuacherry/ansible-role-sudo/compare/1.0.0...1.0.1
