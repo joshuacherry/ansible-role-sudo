@@ -16,6 +16,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.0.3] - 2019-02-07
+
+### Changed
+
+- Vagrant and ansible now use python3 for tests
+
 ## [1.0.2] - 2018-05-09
 
 ### Changed
@@ -28,6 +34,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - updated defaults comments for clarification of options
 
-[Unreleased]: https://github.com/joshuacherry/ansible-role-sudo/compare/1.0.2...HEAD
+[Unreleased]: https://github.com/joshuacherry/ansible-role-sudo/compare/1.0.3...HEAD
+[1.0.3]: https://github.com/joshuacherry/ansible-role-sudo/compare/1.0.2...1.0.3
 [1.0.2]: https://github.com/joshuacherry/ansible-role-sudo/compare/1.0.1...1.0.2
 [1.0.1]: https://github.com/joshuacherry/ansible-role-sudo/compare/1.0.0...1.0.1
