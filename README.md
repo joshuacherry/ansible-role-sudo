@@ -2,9 +2,8 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Build Status](https://travis-ci.org/joshuacherry/ansible-role-sudo.svg?branch=master)](https://travis-ci.org/joshuacherry/ansible-role-sudo)
-![Ansible](https://img.shields.io/badge/ansible-2.5-blue.svg)
-![Ansible](https://img.shields.io/badge/ansible-2.6-blue.svg)
-![Ansible](https://img.shields.io/badge/ansible-2.7-blue.svg)
+![Ansible](https://img.shields.io/badge/ansible-2.8-blue.svg)
+![Ansible](https://img.shields.io/badge/ansible-2.9-blue.svg)
 
 Configures sudo users on a linux server.
 
@@ -12,9 +11,8 @@ Configures sudo users on a linux server.
 
 - Ansible
   - Tested Versions:
-    - 2.5
-    - 2.6
-    - 2.7
+    - 2.8
+    - 2.9
 
 ## Install
 
@@ -29,6 +27,7 @@ Configures sudo users on a linux server.
 | Ubuntu 16.04       |
 | Ubuntu 18.04       |
 | Centos 7           |
+| Centos 8           |
 
 ## Versioning
 
@@ -93,6 +92,7 @@ docker exec -it instance /bin/bash
 | Ubuntu 16.04  | ubuntu1604      | /lib/systemd/systemd     |
 | ubuntu 18.04  | ubuntu1804      | /lib/systemd/systemd     |
 | Centos 7      | centos7         | /usr/lib/systemd/systemd |
+| Centos 8      | centos8         | /usr/lib/systemd/systemd |
 
 ## Example Playbook
 

@@ -9,13 +9,13 @@ ROOT_FOLDER = File.basename(__dir__)
 
 
 $setupScript = <<SCRIPT
-echo -e "\n#########################################\n## Building Python 3.7 ##\n#########################################\n"
+echo -e "\n#########################################\n## Building Python 3.8 ##\n#########################################\n"
 sudo apt-get update
 sudo apt-get install -y build-essential
 sudo apt-get install -y libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev 
-wget https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tgz
-tar -xzvf Python-3.7.0.tgz
-sudo Python-3.7.0/configure # --enable-optimizations
+wget https://www.python.org/ftp/python/3.8.1/Python-3.8.1.tgz
+tar -xzvf Python-3.8.1.tgz
+sudo Python-3.8.1/configure # --enable-optimizations
 sudo make
 sudo make install
 
@@ -34,17 +34,17 @@ sudo apt-get -o Dpkg::Options::="--force-confnew" install -y docker-ce
 
 echo -e "\n#########################################\n## Install Packages with pip ##\n#########################################\n"
 sudo pip install --upgrade \
-  ansible=="2.7.*" \
-  docker=="3.6.*"   \
-  six=="1.11.*"              \
+  ansible=="2.9.*" \
+  docker=="4.2.*"  \
+  six=="1.14.*"    \
   molecule         \
+  ansible-lint     \
+  flake8           \
   tox
 
 sudo usermod -a -G docker vagrant
 
 docker version
-
-docker-compose version
 
 molecule --version
 
@@ -59,13 +59,13 @@ echo "###########################################"
 SCRIPT
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.box = "bento/ubuntu-16.04"
+  config.vm.box = "bento/ubuntu-18.04"
   config.vm.synced_folder ".", "/"+ROOT_FOLDER,
   owner: "vagrant", group: "vagrant",
   mount_options: ["dmode=777,fmode=777"]
   config.vm.define "server" do |host|
     host.vm.hostname = "server"
-    config.vm.network "private_network", type: "dhcp"
+    #config.vm.network "forwarded_port", guest: 80, host: 8080
     host.vm.provider "virtualbox" do |vb|
       vb.memory = "2048"
       vb.cpus = "2"

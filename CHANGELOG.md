@@ -16,6 +16,24 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.0.0] - 2020-03-09
+
+### Added
+
+- Support for python 3.8 and ansible 2.9
+- Support for Centos8
+- Azure pipeline config
+
+### Changed
+
+- Changed molecule version to 3.x
+
+### Removed
+
+- Removed support for ansible 2.5, 2.6, 2.7
+- Removed support for python 2.7
+
+
 ## [1.0.3] - 2019-02-07
 
 ### Changed
